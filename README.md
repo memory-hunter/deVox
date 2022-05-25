@@ -1,5 +1,5 @@
 # deVox
-Voxel (EMCoS Studio .inp Voxel Text File) to .obj (Wavefront) converter.
+.inp (EMCoS Studio Voxel Text File) to .obj (Wavefront) converter.
 
 This script converts to .obj file without the texture coordinates/normals. The faces are in quad mode.
 
