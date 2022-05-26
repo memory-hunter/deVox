@@ -5,15 +5,15 @@ This script converts to .obj file without the texture coordinates/normals. The f
 
 ## Installation
 
-First, run the following command to install the dependencies:
+First, clone the repository:
 
-```bash
-pip install -r requirements.txt
-```
-
-And then clone the repository.
 ```bash
 git clone git@github.com:memory-hunter/deVox.git
+```
+
+And then run the following command to install the dependencies.
+```bash
+pip install -r requirements.txt
 ```
 
 ## Usage
