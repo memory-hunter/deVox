@@ -24,17 +24,19 @@ with open(voxelFile, 'r') as f:
 i = 0
 objLines = []
 
+print('Parsing voxel data...')
+
 while(i <= 2*dims[0]-1):
     line1 = voxelData[i].split()
     line2 = voxelData[i+1].split()
 
-    print("Vertex {}: ".format(line1[0]), end="")
+    #print("Vertex {}: ".format(line1[0]), end="")
 
     line1 = [float(x.strip()) for x in line1]
     line1 = [line1[1], line1[2]]
     line2 = [float(x.strip()) for x in line2]
 
-    print("x: {}, y: {}, z: {}".format(line1[0], line1[1], line2[0]))
+    #print("x: {}, y: {}, z: {}".format(line1[0], line1[1], line2[0]))
 
     objLines.append("v {} {} {}\n".format(line1[0], line1[1], line2[0]))
 
@@ -47,17 +49,20 @@ while(i <= 2*dims[1]-1):
     line1 = voxelData[i].split()
     line2 = voxelData[i+1].split()
 
-    print("Faces {}: ".format(line1[0]), end="")
+    #print("Cube {}: ".format(line1[0]), end="")
 
     line1 = line1[3:]
     line1 = [int(x.strip()) for x in line1]
     line2 = [int(x.strip()) for x in line2]
 
-    print("{} {} {} {}".format(line1[0], line1[1], line1[2], line1[3]), end=", ")
-    print("{} {} {} {}".format(line2[0], line2[1], line2[2], line2[3]))
+    #print("{} {} {} {} {} {} {} {}".format(line1[0], line1[1], line1[2], line1[3], line2[0], line2[1], line2[2], line2[3]))
 
-    objLines.append("f {} {} {} {}\n".format(line1[0], line1[1], line1[2], line1[3]))
-    objLines.append("f {} {} {} {}\n".format(line2[0], line2[1], line2[2], line2[3]))
+    objLines.append("f {} {} {} {}\n".format(line1[0], line2[0], line2[2], line1[2]))
+    objLines.append("f {} {} {} {}\n".format(line1[3], line1[2], line2[2], line2[3]))
+    objLines.append("f {} {} {} {}\n".format(line2[3], line2[2], line2[0], line2[1]))
+    objLines.append("f {} {} {} {}\n".format(line2[1], line1[1], line1[3], line2[3]))
+    objLines.append("f {} {} {} {}\n".format(line1[1], line1[0], line1[2], line1[3]))
+    objLines.append("f {} {} {} {}\n".format(line2[1], line2[0], line1[0], line1[1]))
 
     i += 2
     pass
