@@ -29,5 +29,10 @@ options:
                         Input voxel file.
 ```
 
+## Screenshots
+
+![](./scr/before.png)
+![](./scr/after.png)
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
