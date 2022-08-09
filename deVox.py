@@ -1,7 +1,7 @@
 import argparse as ap
 
 parser = ap.ArgumentParser(description='Convert a voxel file to an obj file.')
-parser.add_argument('-i', '--input', help='Input voxel file.', required=True)
+parser.add_argument('input', help='Input voxel file.')
 args = parser.parse_args()
 
 voxelFile = args.input
