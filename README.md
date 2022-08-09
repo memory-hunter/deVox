@@ -19,14 +19,15 @@ pip install -r requirements.txt
 ## Usage
 
 ```t
-deVox.py [-h] -i INPUT
+usage: deVox.py [-h] input
 
 Convert a voxel file to an obj file.
 
+positional arguments:
+  input       Input voxel file.
+
 options:
-  -h, --help            show this help message and exit
-  -i INPUT, --input INPUT
-                        Input voxel file.
+  -h, --help  show this help message and exit
 ```
 
 ## Screenshots
